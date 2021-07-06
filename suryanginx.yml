@@ -1,0 +1,29 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: suryanginxdeployment
+  labels:
+    app: suryanginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: suryanginx
+  template:
+    metadata:
+      labels:
+        app: suryanginx
+    spec:
+      containers:
+      - name: suryanginx
+        image: suryanagababu/surya-nginx:v2.0
+        ports:
+        - containerPort: 80
+    imagepullsecrets:
+    -name: suryasecrets
+
+
+
+
+

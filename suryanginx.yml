@@ -1,4 +1,4 @@
-
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -20,8 +20,8 @@ spec:
         image: suryanagababu/surya-nginx:v2.0
         ports:
         - containerPort: 80
-    imagepullsecrets:
-    -name: suryasecrets
+      imagePullSecrets:
+      -name: suryasecrets
 
 
 

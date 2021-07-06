@@ -1,2 +1,0 @@
-# nginxtesting
-nginx deployment

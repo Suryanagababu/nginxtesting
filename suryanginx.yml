@@ -35,11 +35,19 @@ spec:
         image: suryanagababu/surya-nginx:v2.0
         ports:
         - containerPort: 80
+        envFrom:
+          - configMapRef:
+              name: suryanginxdeployment
       imagePullSecrets:
       - name: suryasecrets
 ---
-
-
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: suryanginxdeployment
+data:
+  x: "surya"
+---
 
 
 
